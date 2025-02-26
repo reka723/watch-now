@@ -8,3 +8,11 @@ export type Movie = {
         horizontalPoster: { w360: string, w480: string }
     }
 }
+
+export type MovieResponse = {
+    shows: Movie[],
+    hasMore: boolean,
+    nextCursor: string
+}
+
+export type userCredentials = { username: string, password: string }
