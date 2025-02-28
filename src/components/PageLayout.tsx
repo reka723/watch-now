@@ -14,7 +14,7 @@ function PageLayout() {
                 <div className="absolute top-[50%]">
                     <PuffLoader color="purple" className="" />
                 </div> :
-                <div className="w-full h-full flex justify-center p-4 text-center">
+                <div className="w-full h-full flex justify-center items-center p-4 text-center">
                     <Outlet />
                 </div>
             }

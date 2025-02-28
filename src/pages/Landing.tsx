@@ -1,8 +1,8 @@
 import { LoaderFunction, redirect, useLoaderData } from "react-router-dom"
-import { customFetch } from "../utils/customFetch"
-import Banner from "../components/Banner"
 import { Popcorn } from "lucide-react"
 import { useState } from "react"
+import Login from "../components/Login"
+import { MovieResponse } from "../utils/types"
 
 export const loader: LoaderFunction = async (): Promise<unknown> => {
     const user = localStorage.getItem("user")
@@ -13,21 +13,23 @@ export const loader: LoaderFunction = async (): Promise<unknown> => {
 }
 
 function Landing() {
-    const data = useLoaderData()
+    const data = useLoaderData() as MovieResponse
     console.log(data)
     const [showLogin, setShowLogimage] = useState(false)
     const handleClick = () => setShowLogimage(!showLogin)
     return (
-        <div className="w-2/3 flex flex-col justify-center ">
-            {showLogin ? <div>Login</div> :
-                (<div className="flex flex-row gap-5 w-2/5 items-center cursor-pointer group transition-colors duration-500 hover:text-amber-300 " onClick={handleClick}>
+        <>
+
+            {!showLogin ? <Login /> :
+                (<div className="w-2/3 flex flex-col justify-center"><div className="flex flex-row gap-5 w-2/5 items-center cursor-pointer group transition-colors duration-500 hover:text-amber-300 " onClick={handleClick}>
                     <Popcorn className="w-40 h-40 group-hover:animate-bounce" />
                     <h1 className="uppercase text-5xl" >ready</h1>
-                </div>)}
+                </div> </div >)}
 
-            <Banner movies={data.shows} speed={50000} />
-        </div >
+            {/* <Banner movies={data.shows} speed={50000} /> */}
 
+
+        </>
     )
 }
 export default Landing
