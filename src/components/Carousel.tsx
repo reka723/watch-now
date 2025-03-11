@@ -40,7 +40,7 @@ export function CarouselSize() {
         >
             <CarouselContent>
                 {toolsData.map((tool: Tool, index: number) => (
-                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <CarouselItem key={index} className="basis-1/2 lg:basis-1/3">
                         <div className="p-1">
                             <Card>
                                 <CardContent className="flex aspect-square items-center justify-center p-6">

@@ -8,7 +8,7 @@ export default function NavLinks() {
             {links.map((link, index) => {
                 if (!user && link.secret) return null
                 return (
-                    <NavLink key={index} to={link.href}>{link.label}</NavLink>
+                    <NavLink className='w-20' key={index} to={link.href}>{link.label}</NavLink>
                 )
             })}
         </div>

@@ -27,7 +27,7 @@ function Navbar({ handleModal }: { handleModal: () => void }) {
     };
 
     return (
-        <nav className={` z-50 bg-background p-4 text-xl text-foreground shadow-xl w-full ${sticky} transition-all duration-250 ease-in-out`}>
+        <nav className={`overflow-x-scroll z-50 bg-background p-4 text-sm lg:text-xl text-foreground shadow-xl w-full ${sticky} transition-all duration-250 ease-in-out`}>
             <div className="flex justify-between items-center">
                 <NavLink to={'/'}>
                     < HandHeart className="w-12 h-12" />
