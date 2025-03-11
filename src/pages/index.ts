@@ -1,4 +1,5 @@
 export { default as HomePage } from "./Home"
-export { default as LibraryPage } from "./Library"
-export { default as SearchPage } from "./Search"
-export { default as LandingPage } from "./Landing"
+export { default as ProductsPage } from "./Products"
+export { default as OrdersPage } from "./Orders"
+export { default as LoginPage } from "./Login"
+export { default as ContactUsPage } from "./ContactUs"

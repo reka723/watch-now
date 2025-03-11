@@ -4,66 +4,112 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 20 14.3% 4.1%;
-    --card: 0 0% 100%;
-    --card-foreground: 20 14.3% 4.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 14.3% 4.1%;
-    --primary: 24 9.8% 10%;
-    --primary-foreground: 60 9.1% 97.8%;
-    --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
-    --muted: 60 4.8% 95.9%;
-    --muted-foreground: 25 5.3% 44.7%;
-    --accent: 60 4.8% 95.9%;
-    --accent-foreground: 24 9.8% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
-    --ring: 20 14.3% 4.1%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem
+    --background: 120 27.5% 96.9%;
+    /* #f6f9f5 */
+    --foreground: 180 20.5% 32.2%;
+    /* #25868e */
+    --card: 120 27.5% 96.9%;
+    /* #f6f9f5 */
+    --card-foreground: 180 20.5% 32.2%;
+    /* #25868e */
+    --popover: 120 27.5% 96.9%;
+    /* #f6f9f5 */
+    --popover-foreground: 180 20.5% 32.2%;
+    /* #25868e */
+    --primary: 174 34.3% 56.5%;
+    /* #6cc8b4 */
+    --primary-foreground: 180 20.5% 96.1%;
+    /* #b2e0d6 */
+    --secondary: 174 24.6% 81.8%;
+    /* #b2e0d6 */
+    --secondary-foreground: 180 20.5% 32.2%;
+    /* #25868e */
+    --muted: 174 24.6% 81.8%;
+    /* #b2e0d6 */
+    --muted-foreground: 180 25.4% 47.8%;
+    /* #6cc8b4 */
+    --accent: 174 34.3% 56.5%;
+    /* #6cc8b4 */
+    --accent-foreground: 180 20.5% 96.1%;
+    /* #b2e0d6 */
+    --destructive: 180 46.9% 42.8%;
+    /* #3fa2a3 */
+    --destructive-foreground: 180 20.5% 96.1%;
+    /* #b2e0d6 */
+    --border: 180 20.5% 55%;
+    /* #3fa2a3 */
+    --input: 180 20.5% 55%;
+    /* #3fa2a3 */
+    --ring: 180 20.5% 32.2%;
+    /* #25868e */
+    --chart-1: 120 76% 56%;
+    /* #6cc8b4 */
+    --chart-2: 174 34.3% 56.5%;
+    /* #6cc8b4 */
+    --chart-3: 180 46.9% 42.8%;
+    /* #3fa2a3 */
+    --chart-4: 180 25.4% 47.8%;
+    /* #6cc8b4 */
+    --chart-5: 174 24.6% 81.8%;
+    /* #b2e0d6 */
+    --radius: 0.5rem;
   }
 
   .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 60 9.1% 97.8%;
-    --card: 20 14.3% 4.1%;
-    --card-foreground: 60 9.1% 97.8%;
-    --popover: 20 14.3% 4.1%;
-    --popover-foreground: 60 9.1% 97.8%;
-    --primary: 60 9.1% 97.8%;
-    --primary-foreground: 24 9.8% 10%;
-    --secondary: 12 6.5% 15.1%;
-    --secondary-foreground: 60 9.1% 97.8%;
-    --muted: 12 6.5% 15.1%;
-    --muted-foreground: 24 5.4% 63.9%;
-    --accent: 12 6.5% 15.1%;
-    --accent-foreground: 60 9.1% 97.8%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 60 9.1% 97.8%;
-    --border: 12 6.5% 15.1%;
-    --input: 12 6.5% 15.1%;
-    --ring: 24 5.7% 82.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
+    --background: 180 20.5% 32.2%;
+    /* #25868e */
+    --foreground: 120 27.5% 96.9%;
+    /* #f6f9f5 */
+    --card: 180 20.5% 32.2%;
+    /* #25868e */
+    --card-foreground: 120 27.5% 96.9%;
+    /* #f6f9f5 */
+    --popover: 180 20.5% 32.2%;
+    /* #25868e */
+    --popover-foreground: 120 27.5% 96.9%;
+    /* #f6f9f5 */
+    --primary: 120 27.5% 96.9%;
+    /* #f6f9f5 */
+    --primary-foreground: 180 20.5% 32.2%;
+    /* #25868e */
+    --secondary: 174 34.3% 56.5%;
+    /* #6cc8b4 */
+    --secondary-foreground: 120 27.5% 96.9%;
+    /* #f6f9f5 */
+    --muted: 174 34.3% 56.5%;
+    /* #6cc8b4 */
+    --muted-foreground: 180 25.4% 47.8%;
+    /* #6cc8b4 */
+    --accent: 174 34.3% 56.5%;
+    /* #6cc8b4 */
+    --accent-foreground: 120 27.5% 96.9%;
+    /* #f6f9f5 */
+    --destructive: 180 46.9% 42.8%;
+    /* #3fa2a3 */
+    --destructive-foreground: 120 27.5% 96.9%;
+    /* #f6f9f5 */
+    --border: 174 34.3% 56.5%;
+    /* #6cc8b4 */
+    --input: 174 34.3% 56.5%;
+    /* #6cc8b4 */
+    --ring: 180 25.4% 47.8%;
+    /* #6cc8b4 */
+    --chart-1: 120 76% 56%;
+    /* #6cc8b4 */
+    --chart-2: 174 34.3% 56.5%;
+    /* #6cc8b4 */
+    --chart-3: 180 46.9% 42.8%;
+    /* #3fa2a3 */
+    --chart-4: 180 25.4% 47.8%;
+    /* #6cc8b4 */
+    --chart-5: 174 34.3% 56.5%;
+    /* #6cc8b4 */
   }
 }
 
-
-
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
 
   body {

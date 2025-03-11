@@ -1,16 +1,41 @@
-import { Popcorn } from "lucide-react"
+import { HandHeart } from "lucide-react"
 import NavLinks from "./NavLinks"
-function Navbar() {
-    const user = localStorage.getItem('user')
-    if (!user) return null
+import { NavLink } from "react-router-dom"
+import { useEffect, useState } from "react"
+
+function Navbar({ handleModal }: { handleModal: () => void }) {
+    const user = localStorage.getItem('accessToken')
+    const [sticky, setSticky] = useState<string>('')
+
+    useEffect(() => {
+        window.addEventListener('scroll', stickNavbar);
+
+        return () => {
+            window.removeEventListener('scroll', stickNavbar);
+        };
+    }, []);
+
+    const stickNavbar = () => {
+        if (window !== undefined) {
+            const windowHeight = window.scrollY;
+            if (windowHeight > 100) {
+                setSticky('fixed top-0 left-0 z-50 mt-0 h-16 pt-2')
+            }
+            else { setSticky('') }
+
+        }
+    };
+
     return (
-        <nav className="bg-slate-500 mb-8 p-4 text-gray-100">
+        <nav className={`fixed h-24 mt-12 bg-background mb-32 p-4 pt-6 text-xl text-foreground shadow-xl w-full ${sticky} transition-all duration-250 ease-in-out`}>
             <div className="flex justify-between items-center">
-                <Popcorn className="w-8 h-8" />
+                <NavLink to={'/'}>
+                    < HandHeart className="w-12 h-12" />
+                </NavLink>
                 <NavLinks />
-                <p>Login</p>
-            </div>
-        </nav>
+                {!user ? <p onClick={handleModal}>Login</p> : <p>My details</p>}
+            </div >
+        </nav >
     )
 }
 export default Navbar

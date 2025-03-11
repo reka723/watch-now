@@ -9,11 +9,15 @@
     }
   ],
   "compilerOptions": {
+    "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
-      ]
+        "src/*"
+      ],
+      "@/lib/*": [
+        "src/lib/*"
+      ] // Ensure this path exists
     }
   }
 }
