@@ -1,4 +1,20 @@
 import * as React from "react"
+import { Tool, toolsData } from "../dummys/tools"
+import Autoplay from "embla-carousel-autoplay"
+
+export function Example() {
+    return (
+        <Carousel
+            plugins={[
+                Autoplay({
+                    delay: 2000,
+                }),
+            ]}
+        >
+      // ...
+        </Carousel>
+    )
+}
 
 import { Card, CardContent } from "./ui/card"
 import {
@@ -12,18 +28,23 @@ import {
 export function CarouselSize() {
     return (
         <Carousel
+            plugins={[
+                Autoplay({
+                    delay: 2000,
+                }),
+            ]}
             opts={{
                 align: "start",
             }}
-            className="w-full max-w-sm"
+            className="w-full max-w-4xl"
         >
             <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
+                {toolsData.map((tool: Tool, index: number) => (
                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                         <div className="p-1">
                             <Card>
                                 <CardContent className="flex aspect-square items-center justify-center p-6">
-                                    <span className="text-3xl font-semibold">{index + 1}</span>
+                                    <img src={tool.imageUrl} />
                                 </CardContent>
                             </Card>
                         </div>
