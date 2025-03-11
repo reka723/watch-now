@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 
 function Navbar({ handleModal }: { handleModal: () => void }) {
     const user = localStorage.getItem('accessToken')
-    const [sticky, setSticky] = useState<string>('')
+    const [sticky, setSticky] = useState<string>('fixed h-24 mt-12 pt-6 ')
 
     useEffect(() => {
         window.addEventListener('scroll', stickNavbar);
@@ -21,13 +21,13 @@ function Navbar({ handleModal }: { handleModal: () => void }) {
             if (windowHeight > 100) {
                 setSticky('fixed top-0 left-0 mt-0 h-16 pt-2')
             }
-            else { setSticky('') }
+            else { setSticky('fixed h-24 mt-12 pt-6 ') }
 
         }
     };
 
     return (
-        <nav className={`fixed h-24 mt-12 z-50 bg-background mb-32 p-4 pt-6 text-xl text-foreground shadow-xl w-full ${sticky} transition-all duration-250 ease-in-out`}>
+        <nav className={` z-50 bg-background p-4 text-xl text-foreground shadow-xl w-full ${sticky} transition-all duration-250 ease-in-out`}>
             <div className="flex justify-between items-center">
                 <NavLink to={'/'}>
                     < HandHeart className="w-12 h-12" />

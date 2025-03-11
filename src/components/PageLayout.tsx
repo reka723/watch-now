@@ -3,6 +3,7 @@ import { PuffLoader } from "react-spinners"
 import Navbar from "./Navbar"
 import { useState } from "react"
 import Login from "./Login"
+import Footer from "./Footer"
 
 function PageLayout() {
     const navigation = useNavigation()
@@ -25,6 +26,7 @@ function PageLayout() {
                     <Outlet />
                 </div>
             }
+            <Footer />
         </div>
     )
 }
