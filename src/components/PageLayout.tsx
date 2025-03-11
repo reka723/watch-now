@@ -18,10 +18,10 @@ function PageLayout() {
             </header>
             <Login isOpen={isLogin} handleModal={handleModal} />
             {isLoading ?
-                <div className="h-full flex items-center justify-center">
+                <div className="h-screen flex items-center justify-center">
                     <PuffLoader color="white" className="" />
                 </div> :
-                <div className="w-full h-full flex justify-center items-center p-4 text-center mt-60 ">
+                <div className="w-full h-full flex justify-center items-center p-4 text-center mt-52 ">
                     <Outlet />
                 </div>
             }
