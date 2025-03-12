@@ -7,6 +7,12 @@ function Navbar({ handleModal }: { handleModal: () => void }) {
     const user = localStorage.getItem('accessToken')
     const [sticky, setSticky] = useState<string>('fixed h-24 mt-12 pt-6 ')
 
+    const handleLogout = () => {
+        //TODO user slice
+        localStorage.removeItem('accessToken')
+        localStorage.removeItem('refreshToken')
+    }
+
     useEffect(() => {
         window.addEventListener('scroll', stickNavbar);
 
@@ -33,7 +39,7 @@ function Navbar({ handleModal }: { handleModal: () => void }) {
                     < HandHeart className="w-12 h-12" />
                 </NavLink>
                 <NavLinks />
-                {!user ? <p onClick={handleModal}>Login</p> : <p>My details</p>}
+                {!user ? <p onClick={handleModal}>Login</p> : <p onClick={handleLogout}>Logout</p>}
             </div >
         </nav >
     )
